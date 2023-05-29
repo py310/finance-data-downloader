@@ -6,6 +6,7 @@ import configparser
 from downloader_fred import Fred_Downloader
 from downloader_finyahoo import FinYahoo_Downloader
 from downloader_splithistory import SplitHistory_Downloader
+from downloader_ishares import iShares_Downloader
 
 # Define constants
 CONFIG_FILE = 'config.ini'
@@ -44,7 +45,13 @@ def create_downloader(config, section):
                                              tickers_path=config[section]['tickers_path'],
                                              provider=config[section]['provider'],
                                              data_folder=config[section]['data_folder'],
-                                             duration_of_work_min=int(config[section]['duration_of_work_min']))  
+                                             duration_of_work_min=int(config[section]['duration_of_work_min']))
+    elif section == 'ishares':
+        downloader = iShares_Downloader(url=config[section]['url'],
+                                        tickers_path=config[section]['tickers_path'],
+                                        provider=config[section]['provider'],
+                                        data_folder=config[section]['data_folder'],
+                                        duration_of_work_min=int(config[section]['duration_of_work_min']))          
     
     return downloader
 
@@ -78,7 +85,8 @@ def main():
                    'fred': create_downloader(config, 'fred'),
                    'finyahoo_futures': create_downloader(config, 'finyahoo_futures'),
                    'finyahoo_equities': create_downloader(config, 'finyahoo_equities'),
-                   'split_history': create_downloader(config, 'split_history')
+                   'split_history': create_downloader(config, 'split_history'),
+                   'ishares': create_downloader(config, 'ishares')
                    }
 
     if is_schedule:

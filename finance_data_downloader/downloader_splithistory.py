@@ -27,5 +27,6 @@ class SplitHistory_Downloader(Downloader):
                     processed_df.to_csv(file_path, index=False)
                     return True
             return False
-        except:
+        
+        except Exception:
             return False

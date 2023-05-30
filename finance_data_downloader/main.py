@@ -7,6 +7,7 @@ from downloader_fred import Fred_Downloader
 from downloader_finyahoo import FinYahoo_Downloader
 from downloader_splithistory import SplitHistory_Downloader
 from downloader_ishares import iShares_Downloader
+from downloader_nasdaq import Nasdaq_Downloader
 
 # Define constants
 CONFIG_FILE = 'config.ini'
@@ -51,8 +52,12 @@ def create_downloader(config, section):
                                         tickers_path=config[section]['tickers_path'],
                                         provider=config[section]['provider'],
                                         data_folder=config[section]['data_folder'],
-                                        duration_of_work_min=int(config[section]['duration_of_work_min']))          
-    
+                                        duration_of_work_min=int(config[section]['duration_of_work_min']))
+    elif section == 'nasdaq':
+        downloader = Nasdaq_Downloader(url=config[section]['url'],
+                                       provider=config[section]['provider'],
+                                       data_folder=config[section]['data_folder'],
+                                       duration_of_work_min=int(config[section]['duration_of_work_min']))           
     return downloader
 
 # Create threads for parallel execution
@@ -86,7 +91,8 @@ def main():
                    'finyahoo_futures': create_downloader(config, 'finyahoo_futures'),
                    'finyahoo_equities': create_downloader(config, 'finyahoo_equities'),
                    'split_history': create_downloader(config, 'split_history'),
-                   'ishares': create_downloader(config, 'ishares')
+                   'ishares': create_downloader(config, 'ishares'),
+                   'nasdaq': create_downloader(config, 'nasdaq')
                    }
 
     if is_schedule:

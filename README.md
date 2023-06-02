@@ -1,6 +1,17 @@
 # Finance Data Downloader
 
-Finance Data Downloader is a Python application that downloads data from various sources such as FRED (Federal Reserve Economic Data), FinYahoo (Yahoo Finance), and SplitHistory. It allows you to schedule and perform data downloads for different providers.
+Finance Data Downloader is a Python application that downloads data from various sources such as FRED (Federal Reserve Economic Data), FinYahoo (Yahoo Finance), SplitHistory, and more. It allows you to schedule and perform data downloads for different providers.
+
+Supported providers include:
+
+- FRED: Download economic data from the Federal Reserve Economic Data repository.
+- FinYahoo: Download financial data for futures and equities from Yahoo Finance.
+- SplitHistory: Download historical stock split data.
+- Nasdaq: Download symbol change history from Nasdaq.
+- iShares: Download data from iShares.
+- Eurekahedge: Download data from Eurekahedge.
+
+You can either run the downloads on-demand or schedule them to run at specific times.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -10,31 +21,34 @@ Finance Data Downloader is a Python application that downloads data from various
 - [License](#license)
 
 ## Introduction
-The Finance Data Downloader is a Python project that utilizes the `schedule` library to schedule and perform data downloads. It supports multiple providers, including FRED, FinYahoo (for futures and equities), and SplitHistory. You can either run the downloads on-demand or schedule them to run at specific times.
+The Finance Data Downloader is a Python project that allows you to download financial data from different providers.
 
 The project consists of the following files:
 - `main.py`: The main script that sets up the logger, reads the configuration, creates the downloader objects, and launches the downloads either on schedule or manually.
 - `downloader.py`: The base class for the downloader objects, containing common functionality for downloading data.
-- `downloader_finyahoo.py`: A derived class from `downloader.py`, specifically for downloading data from FinYahoo.
 - `downloader_fred.py`: A derived class from `downloader.py`, specifically for downloading data from FRED.
+- `downloader_finyahoo.py`: A derived class from `downloader.py`, specifically for downloading data from FinYahoo.
 - `downloader_splithistory.py`: A derived class from `downloader.py`, specifically for downloading data from SplitHistory.
+- `downloader_nasdaq.py`: A derived class from `downloader.py`, specifically for downloading data from Nasdaq.
+- `downloader_ishares.py`: A derived class from `downloader.py`, specifically for downloading data from iShares.
+- `downloader_eurekahedge.py`: A derived class from `downloader_ishares.py`, specifically for downloading data from Eurekahedge.
 - `config.ini`: The configuration file containing the settings for each provider.
 
 ## Installation
 1. Clone the repository to your local machine: `git clone https://github.com/py310/finance-data-downloader.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
-3. Set up the [configuration file](#configuration):
+3. Set up the [configuration file](#configuration) `config.ini`:
 
 ## Usage
 1. Open a terminal or command prompt and navigate to the project directory.
-2. Run the main script: `python main.py`
-   - If you want to run the downloads on schedule, set `is_schedule = True` in `main.py`.
-   - If you want to run the downloads manually, set `is_schedule = False` in `main.py`.
-3. The script will start downloading the data based on the configuration settings and log the progress to the console and `data_downloader.log` file.
+2. Set `is_schedule = True` in `main.py` if you want to run the downloads on schedule, or set it to `False` for manual execution.
+3. Run the main script: `python main.py`
+4. The script will start downloading the data based on the configuration settings and log the progress to the console and `data_downloader.log` file.
 
 ## Configuration
 The `config.ini` file contains the configuration settings for each provider. You can modify these settings according to your requirements.
 
+- `[provider_name]`: The section name for each provider.
 - `url`: The URL for downloading data, where `!KEY` will be replaced with the actual ticker symbol.
 - `tickers_path`: The file path to the CSV file containing the list of ticker symbols.
 - `provider`: The name of the data provider.

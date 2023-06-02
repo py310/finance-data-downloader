@@ -5,14 +5,17 @@ import requests
 import pandas as pd
 
 class Downloader:
-    def __init__(self, url:str, tickers_path:str, provider:str, data_folder:str, duration_of_work_min:int):
+    def __init__(self, url:str, provider:str, data_folder:str, duration_of_work_min:int, tickers_path:str = None):
         self.url = url
         self.tickers_path = tickers_path
         self.provider = provider
         self.data_folder = data_folder
         self.duration_of_work_sec = duration_of_work_min * 60
         self.headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
-        self.read_tickers_from_file()
+        if tickers_path:
+            self.read_tickers_from_file()
+        else:
+            self.tickers = ['-']
 
     def read_tickers_from_file(self):
         tickers_df = pd.read_csv(self.tickers_path, names=['tickers'])
@@ -33,18 +36,21 @@ class Downloader:
         return self
 
     def download_ticker_data(self, ticker):
+        try:
+            url = self.url.replace('!KEY', ticker)
+            response = requests.get(url, headers=self.headers, timeout=5)
 
-        url = self.url.replace('!KEY', ticker)
-        response = requests.get(url, headers=self.headers, timeout=5)
-
-        # Write the downloaded data to a file
-        if response.status_code == 200:
-            file_path = os.path.join(self.data_folder, f"{ticker}.csv")
-            with open(file_path, "w") as f:
-                f.write(response.text)
-            return True
+            # Write the downloaded data to a file
+            if response.status_code == 200:
+                file_path = os.path.join(self.data_folder, f"{ticker}.csv")
+                with open(file_path, "w") as f:
+                    f.write(response.text)
+                return True
+                
+            else: return False
             
-        else: return False
+        except Exception:
+            return False
 
     def time_limited_download(self):
         logging.info(f"{self.provider} - Data downloader started.")

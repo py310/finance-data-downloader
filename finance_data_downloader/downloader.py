@@ -5,12 +5,15 @@ import requests
 import pandas as pd
 
 class Downloader:
-    def __init__(self, url:str, provider:str, data_folder:str, duration_of_work_min:int, tickers_path:str = None):
+    def __init__(self, url:str, provider:str, data_folder:str, duration_of_work_min:int, tickers_path:str = None, output_format:str = None, uniq_name:str = None, private_key:str = None):
         self.url = url
         self.tickers_path = tickers_path
         self.provider = provider
         self.data_folder = data_folder
         self.duration_of_work_sec = duration_of_work_min * 60
+        self.output_format = output_format
+        self.uniq_name = uniq_name
+        self.private_key = private_key
         self.headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
         if tickers_path:
             self.read_tickers_from_file()

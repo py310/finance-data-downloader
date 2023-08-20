@@ -1,3 +1,4 @@
 __pycache__/
 data/
 data_downloader.log
+config_private.ini

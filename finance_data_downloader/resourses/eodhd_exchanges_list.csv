@@ -1,0 +1,78 @@
+Name,Code,OperatingMIC,Country,Currency,CountryISO2,CountryISO3
+USA Stocks,US,"XNAS, XNYS",USA,USD,US,USA
+London Exchange,LSE,XLON,UK,GBP,GB,GBR
+NEO Exchange,NEO,NEOE,Canada,CAD,CA,CAN
+TSX Venture Exchange,V,XTSX,Canada,CAD,CA,CAN
+Toronto Exchange,TO,XTSE,Canada,CAD,CA,CAN
+Berlin Exchange,BE,XBER,Germany,EUR,DE,DEU
+Hamburg Exchange,HM,XHAM,Germany,EUR,DE,DEU
+XETRA Exchange,XETRA,XETR,Germany,EUR,DE,DEU
+Dusseldorf Exchange,DU,XDUS,Germany,EUR,DE,DEU
+Munich Exchange,MU,XMUN,Germany,EUR,DE,DEU
+Frankfurt Exchange,F,XFRA,Germany,EUR,DE,DEU
+Hanover Exchange,HA,XHAN,Germany,EUR,DE,DEU
+Stuttgart Exchange,STU,XSTU,Germany,EUR,DE,DEU
+Vienna Exchange,VI,XWBO,Austria,EUR,AT,AUT
+Luxembourg Stock Exchange,LU,XLUX,Luxembourg,EUR,LU,LUX
+Euronext Paris,PA,XPAR,France,EUR,FR,FRA
+Euronext Brussels,BR,XBRU,Belgium,EUR,BE,BEL
+Madrid Exchange,MC,BMEX,Spain,EUR,ES,ESP
+SIX Swiss Exchange,SW,XSWX,Switzerland,CHF,CH,CHE
+Euronext Lisbon,LS,XLIS,Portugal,EUR,PT,PRT
+Euronext Amsterdam,AS,XAMS,Netherlands,EUR,NL,NLD
+Stockholm Exchange,ST,XSTO,Sweden,SEK,SE,SWE
+Irish Exchange,IR,XDUB,Ireland,EUR,IE,IRL
+Copenhagen Exchange,CO,XCSE,Denmark,DKK,DK,DNK
+Oslo Stock Exchange,OL,XOSL,Norway,NOK,NO,NOR
+Iceland Exchange,IC,XICE,Iceland,ISK,IS,ISL
+Helsinki Exchange,HE,XHEL,Finland,EUR,FI,FIN
+Botswana Stock Exchange ,XBOT,XBOT,Botswana,BWP,BW,BWA
+Stock Exchange of Mauritius,SEM,XMAU,Mauritius,MUR,MU,MUS
+Egyptian Exchange,EGX,XCAI,Egypt,EGP,EG,EGY
+Ghana Stock Exchange,GSE,XGHA,Ghana,GHS,GH,GHA
+Prague Stock Exchange ,PR,XPRA,Czech Republic,CZK,CZ,CZE
+Regional Securities Exchange,BRVM,XBRV,Ivory Coast,XOF,CI,CIV
+Nairobi Securities Exchange,XNAI,XNAI,Kenya,KES,KE,KEN
+Casablanca Stock Exchange,BC,XCAS,Morocco,MAD,MA,MAR
+Victoria Falls Stock Exchange,VFEX,VFEX,Zimbabwe ,ZWL,ZW,ZWE
+Malawi Stock Exchange,MSE,XMSW,Malawi,MWK,MW,MWI
+Nigerian Stock Exchange,XNSA,XNSA,Nigeria,NGN,NG,NGA
+Rwanda Stock Exchange,RSE,RSEX,Rwanda,RWF ,RW,RWA
+Dar es Salaam Stock Exchange,DSE,XDAR,Tanzania,TZS,TZ,TZA
+Uganda Securities Exchange,USE,XUGA,Uganda,UGX,UG,UGA
+Lusaka Stock Exchange,LUSE,XLUS,Zambia ,ZMW,ZM,ZMB
+Zimbabwe Stock Exchange,XZIM,XZIM,Zimbabwe ,ZWL,ZW,ZWE
+Tel Aviv Exchange,TA,XTAE,Israel,ILS,IL,ISR
+KOSDAQ,KQ,XKOS,Korea,KRW,KR,KOR
+Korea Stock Exchange,KO,XKRX,Korea,KRW,KR,KOR
+Budapest Stock Exchange,BUD,XBUD,Hungary,HUF,HU,HUN
+Warsaw Stock Exchange,WAR,XWAR,Poland,PLN,PL,POL
+Philippine Stock Exchange,PSE,XPHS,Philippines,PHP,PH,PHL
+Jakarta Exchange,JK,XIDX,Indonesia,IDR,ID,IDN
+Shanghai Exchange,SHG,XSHG,China,CNY,CN,CHN
+Johannesburg Exchange,JSE,XJSE,South Africa,ZAR,ZA,ZAF
+Athens Exchange,AT,ASEX,Greece,EUR,GR,GRC
+Shenzhen Exchange,SHE,XSHE,China,CNY,CN,CHN
+Chilean Stock Exchange,SN,XSGO,Chile,CLP,CL,CHL
+Thailand Exchange,BK,XBKK,Thailand,THB,TH,THA
+Australia Exchange,AU,XASX,Australia,AUD,AU,AUS
+Karachi Stock Exchange,KAR,XKAR,Pakistan,PKR,PK,PAK
+Saudi Arabia Exchange,SR,XSAU,Saudi Arabia,SAR,SA,SAU
+Colombo Stock Exchange,CM,XCOL,Sri Lanka,LKR,LK,LKA
+Vietnam Stocks,VN,HSTC,Vietnam,VND,VN,VNM
+Kuala Lumpur Exchange,KLSE,XKLS,Malaysia,MYR,MY,MYS
+Buenos Aires Exchange,BA,XBUE,Argentina,ARS,AR,ARG
+Sao Paolo Exchange,SA,BVMF,Brazil,BRL,BR,BRA
+Bucharest Stock Exchange,RO,XBSE,Romania,RON,RO,ROU
+Mexican Exchange,MX,XMEX,Mexico,MXN,MX,MEX
+London IL,IL,XLON,UK,USD,GB,GBR
+Zagreb Stock Exchange,ZSE,XZAG,Croatia,EUR,HR,HRV
+MICEX Moscow Russia,MCX,,Russia,RUB,RU,RUS
+Taiwan OTC Exchange,TWO,ROCO,Taiwan,TWD,TW,TWN
+Taiwan Exchange,TW,XTAI,Taiwan,TWD,TW,TWN
+Bolsa de Valores de Lima,LIM,XLIM,Peru,PEN,PE,PER
+Money Market Virtual Exchange,MONEY,,Unknown,Unknown,,
+Europe Fund Virtual Exchange,EUFUND,,Unknown,EUR,,
+Istanbul Stock Exchange,IS,XIST,Turkey,TRY,TR,TUR
+Cryptocurrencies,CC,CRYP,Unknown,Unknown,,
+FOREX,FOREX,CDSL,Unknown,Unknown,,

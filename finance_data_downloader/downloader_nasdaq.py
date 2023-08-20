@@ -1,6 +1,4 @@
 import os
-import time
-import logging
 import requests
 import pandas as pd
 from downloader import Downloader
@@ -20,7 +18,7 @@ class Nasdaq_Downloader(Downloader):
         return df
 
     def download_ticker_data(self, ticker):
-        ticker = "renaming"
+        if self.uniq_name: ticker = self.uniq_name
         try:
             response = requests.get(self.url, headers=self.headers, timeout=5)
 
